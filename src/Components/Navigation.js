@@ -3,7 +3,7 @@ import {useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import {useTransition, animated} from 'react-spring'
-
+import NavigationMenu from './NavigationMenu'
 
 
 function Navigation() {
@@ -11,6 +11,7 @@ function Navigation() {
 
     // for nav animation
 	const menuTransitions = useTransition(showMenu, null, {
+		// settings for sliding menu
 		from: {  opacity: 0, transform: 'translateX(-100%)' },
 		enter: { opacity: 1, transform: 'translateX(0%)' },
 		leave: { opacity: 0,  transform: 'translateX(-100%)' },
@@ -22,9 +23,6 @@ function Navigation() {
 		leave: { opacity: 0 },
     })
 
-    //className = 'fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow'
-
-    // className = 'bg-black-t-50 fixed top-0 left-0 w-full h-full z-50
 
 	return(
 		<nav>
@@ -48,7 +46,7 @@ function Navigation() {
 				  </animated.div>
 		  )}
 
-		  {menuTransitions.map(({ item, key, props }) =>
+		   {menuTransitions.map(({ item, key, props }) =>
 				item &&
 				 <animated.div
 				  key={key} 
@@ -56,14 +54,9 @@ function Navigation() {
 				  className = 'fixed bg-white top-0 left-0 w-4/5 h-full z-50 shadow'
 				  >
 
-				  <span className = 'font-bold'>
-				  	Menu
-				  </span>
-
-				  <ul>
-				  	  <li> Home </li>
-
-				  </ul>
+					<NavigationMenu
+						closeMenu = {() => setShowMenu(false)}
+					/>
 
 				  </animated.div>
 		  )}

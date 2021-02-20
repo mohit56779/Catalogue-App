@@ -4,6 +4,7 @@ import Navigation from './Navigation.js';
 
 function Header() {
 	return(
+		// flex and justify between css classes puts our nav icon and appname in left and right corners
 		<header className = "border-b p-3 flex justify-between items-center ">
 			
 			<span className = "font-bold">
