@@ -10,14 +10,15 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "autoprefixer": "^10.0.2",
+    "axios": "^0.21.1",
     "postcss": "^8.1.7",
     "postcss-loader": "^4.0.4",
-    "tailwindcss": "^1.9.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-spring": "^8.0.27",
+    "tailwindcss": "^1.9.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {

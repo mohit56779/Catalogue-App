@@ -10,6 +10,7 @@ import AppHeader from './Components/AppHeader'
 import Footer from './Components/Footer'
 import Home from './Views/Home'
 import About from './Views/About'
+import Product from './Views/Product'
 
 
 
@@ -34,6 +35,9 @@ function App() {
             <About/>
           </Route>
 
+          <Route path = "/products/:id">
+            <Product/>
+          </Route>
         </Switch>
       </div>
 
